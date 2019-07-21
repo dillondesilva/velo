@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:100,700&display=swap');
+
 body {
-  font-family: 'Verdana', sans-serif;
+  font-family: Roboto Mono, monospace, serif;
   font-size: 16px;
   margin: 0;
 }
@@ -20,14 +22,14 @@ h1 {
 }
 
 code {
-  font-family: Menlo, Courier New, monospace, serif;
+  font-family: Roboto Mono, monospace, serif;
   color: white;
   background-color: #777777;
   padding: 0.1em 0.2em;
   border-radius: 0.3em;
 }
 
-p {
+#container p {
   text-align: center;
 }
 
@@ -40,8 +42,7 @@ p {
   border: 1px solid grey;
   border-radius: 0.5em;
   transition: background-color 100ms ease-in-out,
-              color 100ms ease-in-out,
-              transform 100ms ease;
+              color 100ms ease-in-out;
 }
 
 #start:hover {
@@ -54,14 +55,29 @@ p {
   outline: 0;
 }
 
+#result {
+  font-weight: 100 !important;
+  text-align: center;
+  font-size: 2em;
+}
+
+#loading {
+  margin: 0 auto;
+}
+
 #start:active {
   background: #408dd8;
 }
 
 #footer {
-  margin: 1.5em;
+  background: lightgrey;
+  padding: 1em;
   position: fixed;
   bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 100%;
+  text-align: center;
 }
 
 #footer a {

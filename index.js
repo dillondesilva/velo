@@ -11,12 +11,21 @@ function displayResults(startTime, endTime) {
     
     console.log(`${speedBps}Bps`, `${speedKbps}Kbps`, `${speedMbps}Mbps`);
     
-    // Insert code for showing speed visibility 
-    // within html
+    $("#result").text(`${speedMbps} Mbps`);
+    $("#loading").fadeOut("fast", function () {
+      $("#result").fadeIn("fast", function () {
+        console.log('second animation finished');
+      });
+    });
 }
 
 // Run speed test by downloading image
 function runSpeedTest() {
+  $("#start").fadeOut("fast", function () {
+    $("#loading").fadeIn("fast", function () {
+      console.log('first animation finished');
+    });
+  });
   console.log('Speed test running...');
 
   // Init variables for timestamps
