@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>velo</title>
+    <title>velo - a speedtest tool</title>
     <link rel="stylesheet" href="style.css" />
     <script src="index.js"></script>
+    <script src="style.js"></script>
   </head>
   <body>
     <h1><code>velo</code></h1>
-    <p>
-      <code>velo</code> is a work-in-progess speedtest tool.
-      <br>
-      <br>
-      <button onclick="runSpeedTest()">Run Speed Test</button>
+    <p id="container">
+      <button id="start" onclick="runSpeedTest()">BEGIN SPEEDTEST</button>
     </p>
+    <!-- <p id="footer">
+      Made with <a id="footer-heart" href="https://github.com/dillondesilva/velo">&#10084;</a> in Australia
+    </p> -->
   </body>
 </html>
