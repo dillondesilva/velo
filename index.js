@@ -31,7 +31,7 @@ function runSpeedTest() {
     displayResults(startTime, endTime);
   }
 
-  // Fuck...
+  // Oops
   downloadImage.onerror = ((err, msg) => {
     alert("Error checking download speed.");
     console.log(err, msg);
