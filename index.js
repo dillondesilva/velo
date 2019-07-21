@@ -1,6 +1,6 @@
 // Standard google logo image and it's size
-const imgURL = "https://homepages.cae.wisc.edu/~ece533/images/watch.png";
-const imgSize = 697056;
+const imgURL = "https://images.unsplash.com/photo-1556745757-8d76bdb6984b";
+const imgSize = 2028224;
 
 function displayResults(speedMbps) {
     $("#result").text(`${speedMbps} Mbps DL`);
