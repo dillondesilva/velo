@@ -7,5 +7,6 @@
 ## Collaborators
 
 [Joshua Quail](https://github.com/realtable)
+<br>
 [Dillon de Silva](https://github.com/dillondesilva)
 
