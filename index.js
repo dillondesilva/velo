@@ -9,7 +9,8 @@ function displayResults(startTime, endTime) {
     var speedKbps = (speedBps / 1024).toFixed(2);
     var speedMbps = (speedKbps / 1024).toFixed(2);
     
-    console.log(speedBps, speedKbps, speedMbps);
+    console.log(`${speedBps}Bps`, `${speedKbps}Kbps`, `${speedMbps}Mbps`);
+    
     // Insert code for showing speed visibility 
     // within html
 }
