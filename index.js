@@ -1,11 +1,12 @@
 // Standard google logo image and it's size
-const imgURL = "https://i.dailymail.co.uk/i/pix/2015/09/01/18/2BE1E88B00000578-3218613-image-m-5_1441127035222.jpg";
-const imgSize = 19091;
+const imgURL = "https://homepages.cae.wisc.edu/~ece533/images/watch.png";
+const imgSize = 697056;
 
 function displayResults(speedMbps) {
-    $("#result").text(`${speedMbps} Mbps`);
-    $("#loading").fadeOut("fast", function () {
-      $("#result").fadeIn("fast", function () {
+    $("#result").text(`${speedMbps} Mbps DL`);
+    $("#loading, #testno").fadeOut("fast", function () {
+      $("#testno").text('0/5');
+      $("#result, #reset").fadeIn("fast", function () {
         console.log('second animation finished');
       });
     });
@@ -24,7 +25,7 @@ function calcSpeed(startTime, endTime) {
 // Initialise speed test download runs
 function initSpeedTest() {
   $("#start").fadeOut("fast", function () {
-    $("#loading").fadeIn("fast", function () {
+    $("#loading, #testno").fadeIn("fast", function () {
       console.log('first animation finished');
     });
   });
@@ -49,6 +50,7 @@ function initSpeedTest() {
 function executeTestIterations(currentIter, numOfIter, speedTotal, callback) {
   runSpeedTest((speed) => {
     if (currentIter < numOfIter) {
+      $("#testno").text(`${currentIter + 1}/5`);
       executeTestIterations(currentIter + 1, numOfIter, speedTotal + speed, callback);
     } else {
       callback(speedTotal + speed);
@@ -84,4 +86,13 @@ function runSpeedTest(callback) {
   startTime = (new Date()).getTime();
   var cacheBuster = "?nnn=" + startTime;
   downloadImage.src = imgURL + cacheBuster;
+}
+
+// rests speed test
+function resetSpeedTest() {
+  $("#result, #reset").fadeOut("fast", function () {
+    $("#start").fadeIn("fast", function () {
+      console.log('reset animation part 2 finished');
+    });
+  });
 }
